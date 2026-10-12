@@ -12,8 +12,8 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $user = User::firstOrCreate(
-            ['email' => 'jp@gmail.com'],
-            ['name' => 'jp', 'password' => Hash::make('123456789')]
+            ['email' => 'demo@example.com'],
+            ['name' => 'DEMO USER', 'password' => Hash::make('password123')]
         );
 
         if ($user->tickets()->doesntExist()) {
